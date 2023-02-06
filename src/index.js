@@ -1,13 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Navbar from './Componentes/Navbar';
+import AboutUs from './Componentes/AboutUs';
+import Product from './Componentes/productos';
+import Idproducto from './Componentes/idproducto';
 
+const browserRouter = createBrowserRouter([
+  {
+    path: '/',
+    element: <AboutUs></AboutUs>
+  },
+  {
+    path: '/idproducto/:id',
+    element: <Idproducto />
+  }
+])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <RouterProvider router={browserRouter} />
   </React.StrictMode>
 );
 
