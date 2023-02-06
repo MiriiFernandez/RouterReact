@@ -26,7 +26,7 @@ function Product(props) {
           <img width="300px" src={product.images[0]} />
           <button >
             <a href={"/idproducto/" + product.id}>
-              Visualizar ID del producto
+              Ver ID del producto
             </a>
           </button>
         </div>
